@@ -1,0 +1,23 @@
+/* Full-bleed composition: edge-to-edge visual sections with one shared inner grid. */
+body{background:var(--paper)}
+.hero{width:100%;max-width:none;height:100svh;min-height:760px;margin:0;border-radius:0}
+.site-header{top:20px;width:calc(100% - 72px);max-width:none}
+.hero-copy{padding-left:6vw}
+.property-search{width:92%;max-width:none;margin:-38px 4% 0}
+.marquee{width:100%;max-width:none;margin:0;border-radius:0;padding:18px 0}
+.section{width:100%;max-width:none;margin:0;padding:130px 6vw}
+.properties{background:var(--paper)}
+.featured-listing{border-radius:0;box-shadow:none}
+.intro{background:var(--cream);grid-template-columns:minmax(360px,42vw) 1fr;padding-top:140px;padding-bottom:140px}
+.pathways{width:100%;max-width:none;margin:0;gap:0}
+.pathway{border-radius:0;min-height:760px;padding-left:6vw;padding-right:6vw}
+.evaluation{background:var(--paper);padding-top:145px;padding-bottom:145px}
+.tools{width:100%;max-width:none;margin:0;border-radius:0;padding-left:6vw;padding-right:6vw}
+.alert-section{width:100%;max-width:none;margin:0;padding:140px 6vw;background:var(--cream)}
+.resources{background:var(--paper)}
+.article-grid{gap:0}
+.article-grid article{border-radius:0;border:1px solid var(--stone);margin:-1px 0 0 -1px}
+.callback{width:100%;max-width:none;margin:0;border-radius:0;padding-left:6vw;padding-right:6vw}
+.footer{width:100%;max-width:none;margin:0;border-radius:0;padding-left:6vw;padding-right:6vw}
+@media(max-width:900px){.site-header{width:calc(100% - 28px)}.hero{min-height:900px}.hero-copy{padding-left:5vw;padding-right:5vw}.property-search{width:92%;margin-left:4%;margin-right:4%}.section,.tools,.alert-section,.callback,.footer{padding-left:5vw;padding-right:5vw}.intro{grid-template-columns:1fr}.pathway{padding-left:5vw;padding-right:5vw}}
+@media(max-width:600px){.site-header{width:calc(100% - 20px);top:10px}.hero{width:100%;min-height:850px;margin:0;border-radius:0}.property-search{width:100%;margin:-12px 0 0;border-radius:0}.marquee{width:100%;border-radius:0}.section,.tools,.alert-section,.callback,.footer{width:100%;padding-left:20px;padding-right:20px}.pathways{width:100%}.pathway{border-radius:0;padding-left:22px;padding-right:22px}.featured-listing,.tools,.callback,.footer{border-radius:0}}
