@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tommy Trépanier | Courtier immobilier Rive-Sud</title>
+  <meta name="description" content="Achetez ou vendez sur la Rive-Sud et en Montérégie avec Tommy Trépanier, courtier immobilier résidentiel chez Groupe Sutton-Actuel.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Cpath d='M14 19h36M32 19v30' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M40 43h10' stroke='%23e60000' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Tommy Trépanier, accueil">
+      <img src="images/brand/tommy-signature-black.png" alt="Tommy" width="472" height="250">
+      <span><strong>Tommy Trépanier</strong><small>Courtier immobilier</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="#proprietes">Mes propriétés</a>
+      <details><summary>Acheter</summary><div class="dropdown"><a href="#acheter">Mon projet d’achat</a><a href="#outils">Financement</a><a href="#ressources">Conseils aux acheteurs</a></div></details>
+      <details><summary>Vendre</summary><div class="dropdown"><a href="#vendre">Vendre avec Tommy</a><a href="#evaluation">Évaluation en ligne</a><a href="#ressources">Conseils aux vendeurs</a></div></details>
+      <a href="#outils">Outils</a>
+      <a href="#ressources">Blogue</a>
+      <a href="#contact">Me contacter</a>
+    </nav>
+    <div class="header-contact">
+      <a href="tel:+15148837000">514 883-7000</a>
+      <a class="header-cta" href="#contact">Retour d’appel</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="hero-mark">
+          <img src="images/brand/tommy-signature-black.png" alt="Signature de Tommy" width="472" height="250">
+        </div>
+        <p class="eyebrow">Courtier immobilier résidentiel · Rive-Sud &amp; Montérégie</p>
+        <h1 id="hero-title">Votre prochain<br><span>mouvement</span><br>commence ici.</h1>
+        <p class="hero-lead">Acheter, vendre ou simplement explorer vos options : une approche directe, attentive et adaptée à votre projet.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#evaluation">Vendre une propriété <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#acheter">Acheter une propriété</a>
+        </div>
+        <div class="hero-meta"><a href="tel:+15148837000">514 883-7000</a><span>Français · English</span></div>
+      </div>
+      <div class="hero-portrait">
+        <img class="sutton-badge" src="images/brand/sutton-badge-red.png" alt="Sutton" width="200" height="200">
+        <div class="portrait-shape" aria-hidden="true"></div>
+        <img class="tommy-portrait" src="images/brand/tommy-portrait.png" alt="Tommy Trépanier, courtier immobilier résidentiel" width="331" height="572">
+        <div class="portrait-label"><strong>Tommy Trépanier</strong><span>Groupe Sutton-Actuel Inc.</span></div>
+      </div>
+    </section>
+
+    <section class="property-search" aria-labelledby="search-title">
+      <div class="search-heading"><p class="eyebrow" id="search-title">Trouvez votre prochain chez-vous</p><a href="#alerte">Créer une alerte</a></div>
+      <form id="property-search-form">
+        <label><span>Ville, secteur ou adresse</span><input name="location" type="search" placeholder="Ex. : Saint-Hubert" autocomplete="address-level2"></label>
+        <label><span>Type de propriété</span><select name="type"><option value="">Tous les types</option><option>Maison</option><option>Condo</option><option>Multiplex</option><option>Terrain</option></select></label>
+        <label><span>Fourchette de prix</span><select name="price"><option value="">Tous les prix</option><option>Moins de 400 000 $</option><option>400 000 $ à 600 000 $</option><option>600 000 $ à 900 000 $</option><option>900 000 $ et plus</option></select></label>
+        <label><span>Chambres</span><select name="beds"><option value="">Peu importe</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select></label>
+        <button class="button button-red" type="submit">Rechercher</button>
+      </form>
+      <p class="form-status" id="search-status" role="status"></p>
+    </section>
+
+    <section class="section properties" id="proprietes" aria-labelledby="properties-title">
+      <div class="section-head">
+        <div><p class="eyebrow">En marché</p><h2 id="properties-title">Mes propriétés</h2></div>
+        <p>Découvrez les propriétés actuellement représentées par Tommy Trépanier.</p>
+      </div>
+      <article class="featured-listing">
+        <div class="listing-visual">
+          <span class="listing-kicker">Sélection actuelle</span>
+          <div class="listing-house" aria-hidden="true"><span class="roof"></span><span class="window one"></span><span class="window two"></span><span class="door"></span></div>
+          <span class="listing-note">L’inventaire et les prix sont confirmés sur la fiche officielle.</span>
+        </div>
+        <div class="listing-copy">
+          <p class="eyebrow">Saint-Hubert · Condo</p>
+          <h3>6410, rue Bernard-Racicot</h3>
+          <p>Un 4 ½ lumineux à quelques pas du parc de la Cité, avec garage, foyer au gaz et stationnement tandem.</p>
+          <div class="listing-facts"><span><strong>2</strong> chambres</span><span><strong>1</strong> salle de bain</span><span><strong>1 016</strong> pi²</span><span><strong>24127417</strong> no Centris</span></div>
+          <a class="text-link" href="#contact">Demander la fiche à jour <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <div class="inventory-note"><span>01</span><p><strong>Une recherche à votre mesure.</strong> Dites-moi vos secteurs et vos critères; je vous transmets les nouvelles occasions dès leur arrivée.</p><a href="#alerte">Créer mon alerte</a></div>
+    </section>
+
+    <section class="section intro" aria-labelledby="intro-title">
+      <div class="intro-portrait"><img src="images/brand/tommy-portrait.png" alt="Tommy Trépanier" width="331" height="572"><span>Votre projet.<br>Une direction claire.</span></div>
+      <div class="intro-copy"><p class="eyebrow">Une approche humaine, sans détour</p><h2 id="intro-title">Votre courtier pour décider avec confiance.</h2><p class="intro-lead">Un bon accompagnement immobilier, c’est plus qu’une transaction. C’est comprendre ce qui compte pour vous, anticiper les étapes et vous donner l’heure juste.</p><div class="intro-points"><p><span>01</span><strong>Écoute</strong>Votre réalité avant tout.</p><p><span>02</span><strong>Stratégie</strong>Des décisions appuyées par les faits.</p><p><span>03</span><strong>Présence</strong>Un suivi clair, du premier appel au notaire.</p></div><a class="button button-dark" href="#contact">Rencontrer Tommy</a></div>
+    </section>
+
+    <section class="pathways" aria-label="Acheter ou vendre">
+      <article class="pathway pathway-buy" id="acheter">
+        <p class="eyebrow">Acheter</p><h2>Devenir propriétaire :<br>une excellente décision.</h2><p>Préparez votre projet avec une démarche claire, des outils pratiques et un accompagnement adapté à vos besoins.</p>
+        <ul><li>Analyser mes besoins</li><li>Comprendre le financement</li><li>Prévoir les frais de démarrage</li><li>Comprendre mes protections</li></ul>
+        <a class="button button-dark" href="#contact">Commencer mon projet d’achat</a>
+      </article>
+      <article class="pathway pathway-sell" id="vendre">
+        <p class="eyebrow">Vendre</p><h2>Vendre avec<br>confiance.</h2><p>De la préparation de votre propriété jusqu’à la signature chez le notaire, profitez d’une stratégie claire et d’un suivi structuré.</p>
+        <ul><li>Préparer mes documents</li><li>Faire bonne impression</li><li>Déterminer le juste prix</li><li>Comprendre mes protections</li></ul>
+        <a class="button button-light" href="#evaluation">Parler de ma vente</a>
+      </article>
+    </section>
+
+    <section class="section evaluation" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="evaluation-copy"><p class="eyebrow">Évaluation immobilière</p><h2 id="evaluation-title">Combien vaut<br>ma maison?</h2><p>Obtenez une première analyse adaptée à votre propriété, à votre secteur et au marché actuel.</p><div class="evaluation-aside"><span>Simple</span><span>Personnalisée</span><span>Sans engagement</span></div></div>
+      <form class="evaluation-form" id="evaluation-form">
+        <div class="step active" data-step="1">
+          <div class="step-head"><span>Étape 1 sur 2</span><strong>Parlez-moi de votre propriété</strong></div>
+          <label>Adresse de la propriété<input name="address" required placeholder="123, rue Exemple"></label>
+          <div class="form-grid"><label>Municipalité<input name="city" required placeholder="Saint-Hubert"></label><label>Type de propriété<select name="propertyType" required><option value="">Choisir</option><option>Maison</option><option>Condo</option><option>Multiplex</option><option>Autre</option></select></label></div>
+          <button class="button button-dark next-step" type="button">Continuer</button>
+        </div>
+        <div class="step" data-step="2" hidden>
+          <div class="step-head"><span>Étape 2 sur 2</span><strong>Comment vous joindre?</strong></div>
+          <div class="form-grid"><label>Prénom<input name="firstName" required autocomplete="given-name"></label><label>Nom<input name="lastName" required autocomplete="family-name"></label></div>
+          <div class="form-grid"><label>Téléphone<input name="phone" type="tel" required placeholder="514-555-1234" autocomplete="tel"></label><label>Courriel<input name="email" type="email" required placeholder="vous@exemple.com" autocomplete="email"></label></div>
+          <div class="form-grid"><label>Contact préféré<select name="contactMethod"><option>Téléphone</option><option>Courriel</option><option>Message texte</option></select></label><label>Échéancier<select name="timeline"><option>Je m’informe</option><option>0 à 3 mois</option><option>3 à 6 mois</option><option>6 mois et plus</option></select></label></div>
+          <label>Message<textarea name="message" rows="3" placeholder="Ce que vous aimeriez savoir…"></textarea></label>
+          <label class="check"><input type="checkbox" name="emailConsent"><span>J’accepte de recevoir l’infolettre et les communications immobilières de Tommy Trépanier.</span></label>
+          <div class="form-actions"><button class="back-step" type="button">Retour</button><button class="button button-red" type="submit">Demander mon estimation</button></div>
+        </div>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="tools" id="outils" aria-labelledby="tools-title">
+      <div class="tools-head"><p class="eyebrow">Outils immobiliers</p><h2 id="tools-title">Planifiez votre projet<br>avec les bons outils.</h2><p>Des repères simples pour passer de l’idée au plan.</p></div>
+      <div class="tool-list">
+        <details class="tool" open><summary><span class="tool-num">01</span><span><strong>Calculatrice hypothécaire</strong><small>Estimez vos versements selon votre mise de fonds.</small></span><i>+</i></summary><div class="tool-body mortgage-calculator"><div class="form-grid"><label>Prix d’achat<input id="mortgage-price" type="number" min="0" step="1000" value="500000"></label><label>Mise de fonds<input id="mortgage-down" type="number" min="0" step="1000" value="50000"></label></div><div class="form-grid"><label>Taux d’intérêt (%)<input id="mortgage-rate" type="number" min="0" step="0.01" value="4.50"></label><label>Amortissement<select id="mortgage-years"><option>20</option><option selected>25</option><option>30</option></select></label></div><div class="calculator-result"><span>Paiement mensuel estimé</span><strong id="mortgage-result">—</strong><small id="insurance-note"></small></div></div></details>
+        <details class="tool"><summary><span class="tool-num">02</span><span><strong>Calculateur de mutation</strong><small>Obtenez une estimation indicative du droit de mutation.</small></span><i>+</i></summary><div class="tool-body"><p>Les taux varient selon la municipalité et l’année. Pour une estimation fiable, communiquez le prix, l’évaluation municipale et le facteur comparatif.</p><a class="text-link" href="#contact">Faire calculer mon estimation</a><small class="disclaimer">Configuration à valider auprès de la municipalité avant toute utilisation transactionnelle. Mise à jour : octobre 2026.</small></div></details>
+        <details class="tool"><summary><span class="tool-num">03</span><span><strong>Demande d’estimation</strong><small>Recevez une première analyse personnalisée.</small></span><i>+</i></summary><div class="tool-body"><p>Votre propriété, votre secteur et votre échéancier méritent une lecture sur mesure.</p><a class="text-link" href="#evaluation">Estimer ma propriété</a></div></details>
+        <details class="tool"><summary><span class="tool-num">04</span><span><strong>Alerte immobilière</strong><small>Recevez les nouvelles propriétés selon vos critères.</small></span><i>+</i></summary><div class="tool-body"><p>Choisissez vos secteurs, votre budget et le type de propriété recherché.</p><a class="text-link" href="#alerte">Créer mon alerte</a></div></details>
+      </div>
+      <p class="tools-disclaimer">Les calculs sont des estimations et ne constituent pas des conseils financiers, juridiques ou fiscaux.</p>
+    </section>
+
+    <section class="alert-section" id="alerte" aria-labelledby="alert-title">
+      <div><p class="eyebrow">Alerte immobilière</p><h2 id="alert-title">Soyez parmi<br>les premiers informés.</h2><p>Recevez les nouvelles propriétés correspondant à vos critères dès qu’elles deviennent disponibles.</p></div>
+      <form id="alert-form">
+        <div class="form-grid"><label>Municipalités recherchées<input required name="municipalities" placeholder="Longueuil, Boucherville…"></label><label>Type de propriété<select name="type"><option>Maison</option><option>Condo</option><option>Multiplex</option><option>Terrain</option></select></label></div>
+        <div class="form-grid thirds"><label>Prix minimum<input type="number" name="minPrice" placeholder="300 000"></label><label>Prix maximum<input type="number" name="maxPrice" placeholder="700 000"></label><label>Chambres<select name="beds"><option>1+</option><option>2+</option><option selected>3+</option><option>4+</option></select></label></div>
+        <div class="form-grid"><label>Courriel<input type="email" name="email" required placeholder="vous@exemple.com"></label><label>Téléphone mobile<input type="tel" name="phone" placeholder="514-555-1234"></label></div>
+        <label class="check"><input type="checkbox" name="listingConsent"><span>J’accepte de recevoir par courriel les propriétés correspondant à mes critères.</span></label>
+        <label class="check"><input type="checkbox" name="smsConsent"><span>J’accepte de recevoir par texto les alertes demandées. Répondez STOP pour vous désabonner.</span></label>
+        <button class="button button-red" type="submit">Créer mon alerte</button><p class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section resources" id="ressources" aria-labelledby="resources-title">
+      <div class="section-head"><div><p class="eyebrow">Conseils &amp; ressources</p><h2 id="resources-title">Mieux informé.<br>Mieux préparé.</h2></div><p>Des réponses claires aux questions qui comptent avant d’acheter ou de vendre au Québec.</p></div>
+      <div class="article-grid">
+        <article class="article-feature"><span>Acheter · 6 min</span><h3>Les frais de démarrage à prévoir avant de devenir propriétaire</h3><p>Inspection, notaire, ajustements, taxe de bienvenue : établissez un budget réaliste avant de déposer une promesse d’achat.</p><a href="#contact">En parler avec Tommy</a></article>
+        <article><span>Vendre · 5 min</span><h3>Comment déterminer le juste prix dans votre secteur</h3><a href="#contact">Obtenir une analyse</a></article>
+        <article><span>Acheter · 4 min</span><h3>Pourquoi travailler avec un courtier immobilier</h3><a href="#contact">Comprendre l’accompagnement</a></article>
+        <article><span>Vendre · 7 min</span><h3>Les documents à préparer avant la mise en marché</h3><a href="#contact">Préparer mon dossier</a></article>
+      </div>
+    </section>
+
+    <section class="callback" id="contact" aria-labelledby="contact-title">
+      <div class="callback-copy"><p class="eyebrow">Besoin d’une réponse rapide?</p><h2 id="contact-title">Demandez un<br>retour d’appel.</h2><p>Expliquez-moi brièvement votre projet. Je vous reviens dans les meilleurs délais.</p><div class="callback-phone"><span>Direct</span><a href="tel:+15148837000">514 883-7000</a><small>Bureau : 450-443-2331</small></div></div>
+      <form id="callback-form">
+        <div class="form-grid"><label>Votre prénom<input name="firstName" required placeholder="Entrez votre prénom" autocomplete="given-name"></label><label>Votre nom<input name="lastName" required placeholder="Entrez votre nom" autocomplete="family-name"></label></div>
+        <div class="form-grid"><label>Votre téléphone<input name="phone" type="tel" required placeholder="Ex. : 514-555-1234" autocomplete="tel"></label><label>Votre courriel<input name="email" type="email" required placeholder="votrenom@domaine.com" autocomplete="email"></label></div>
+        <fieldset><legend>Moment préféré</legend><div class="radio-row"><label><input type="radio" name="period" value="Matin" checked> Matin</label><label><input type="radio" name="period" value="Après-midi"> Après-midi</label><label><input type="radio" name="period" value="Soirée"> Soirée</label></div></fieldset>
+        <label>Comment Tommy peut-il vous aider?<textarea name="message" rows="4"></textarea></label>
+        <details class="consents"><summary>Préférences de communication facultatives</summary><label class="check"><input type="checkbox" name="serviceSms"><span>J’accepte de recevoir des textos non promotionnels liés à ma demande, dont des réponses, confirmations et rappels. La fréquence varie; des frais peuvent s’appliquer. Répondez AIDE pour obtenir de l’aide ou STOP pour vous désabonner.</span></label><label class="check"><input type="checkbox" name="marketingSms"><span>J’accepte de recevoir des textos promotionnels de Tommy Trépanier et TaVendu. La fréquence varie; des frais peuvent s’appliquer. Répondez AIDE ou STOP. Le consentement n’est pas une condition d’achat.</span></label><label class="check"><input type="checkbox" name="newsletter"><span>J’accepte de recevoir l’infolettre et les communications immobilières de Tommy Trépanier.</span></label></details>
+        <button class="button button-red" type="submit">Envoyer ma demande</button><p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><div class="signature-white"><img src="images/brand/tommy-signature-black.png" alt="Signature Tommy" width="472" height="250"></div><h3>Tommy Trépanier</h3><p>Courtier immobilier résidentiel<br>Les Immeubles Tommy Trépanier Inc.</p></div>
+    <div class="footer-col"><h4>Contact</h4><a href="tel:+15148837000">Direct : 514-883-7000</a><a href="tel:+14504432331">Bureau : 450-443-2331</a><a href="mailto:ttrepanier@sutton.com">ttrepanier@sutton.com</a></div>
+    <div class="footer-col"><h4>Explorer</h4><a href="#proprietes">Mes propriétés</a><a href="#acheter">Acheter</a><a href="#vendre">Vendre</a><a href="#outils">Outils</a><a href="#evaluation">Évaluation</a><a href="#ressources">Blogue</a></div>
+    <div class="footer-agency"><img src="images/brand/sutton-badge-red.png" alt="Sutton" width="200" height="200"><p>Groupe Sutton-Actuel Inc.<br>Agence immobilière<br>2975, montée Saint-Hubert<br>Saint-Hubert, Québec J3Y 4H6</p></div>
+    <div class="footer-bottom"><span>© 2026 Les Immeubles Tommy Trépanier Inc. Tous droits réservés.</span><span><a href="#">Confidentialité</a><a href="#">Conditions</a><a href="#">Accessibilité</a></span><a href="#top">Haut ↑</a></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
