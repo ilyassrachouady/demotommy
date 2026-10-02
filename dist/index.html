@@ -8,9 +8,9 @@
   <meta name="theme-color" content="#0b0b0b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Cpath d='M14 19h36M32 19v30' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M40 43h10' stroke='%23e60000' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -36,15 +36,16 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="hero-copy">
         <div class="hero-mark">
           <img src="images/brand/tommy-signature-black.png" alt="Signature de Tommy" width="472" height="250">
         </div>
-        <p class="eyebrow">Courtier immobilier résidentiel · Rive-Sud &amp; Montérégie</p>
-        <h1 id="hero-title">Votre prochain<br><span>mouvement</span><br>commence ici.</h1>
-        <p class="hero-lead">Acheter, vendre ou simplement explorer vos options : une approche directe, attentive et adaptée à votre projet.</p>
+        <p class="eyebrow"><span></span>Courtier immobilier résidentiel · Rive-Sud &amp; Montérégie</p>
+        <h1 id="hero-title">Votre prochain<br><em>mouvement</em><br>commence ici.</h1>
+        <p class="hero-lead">Acheter, vendre ou simplement explorer vos options. Une expérience immobilière claire, humaine et résolument moderne.</p>
         <div class="hero-actions">
-          <a class="button button-light" href="#evaluation">Vendre une propriété <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="#evaluation">Vendre une propriété</a>
           <a class="button button-outline" href="#acheter">Acheter une propriété</a>
         </div>
         <div class="hero-meta"><a href="tel:+15148837000">514 883-7000</a><span>Français · English</span></div>
@@ -54,6 +55,11 @@
         <div class="portrait-shape" aria-hidden="true"></div>
         <img class="tommy-portrait" src="images/brand/tommy-portrait.png" alt="Tommy Trépanier, courtier immobilier résidentiel" width="331" height="572">
         <div class="portrait-label"><strong>Tommy Trépanier</strong><span>Groupe Sutton-Actuel Inc.</span></div>
+      </div>
+      <div class="hero-stats" aria-label="Points forts">
+        <div><span>01</span><strong>Rive-Sud</strong><small>Expertise locale</small></div>
+        <div><span>02</span><strong>Résidentiel</strong><small>Achat &amp; vente</small></div>
+        <div><span>03</span><strong>Présent</strong><small>Du premier appel au notaire</small></div>
       </div>
     </section>
 
@@ -68,6 +74,8 @@
       </form>
       <p class="form-status" id="search-status" role="status"></p>
     </section>
+
+    <div class="marquee" aria-hidden="true"><div><span>ACHETER AVEC CONFIANCE</span><i>✦</i><span>VENDRE AVEC STRATÉGIE</span><i>✦</i><span>VIVRE LA RIVE-SUD</span><i>✦</i><span>ACHETER AVEC CONFIANCE</span><i>✦</i><span>VENDRE AVEC STRATÉGIE</span><i>✦</i></div></div>
 
     <section class="section properties" id="proprietes" aria-labelledby="properties-title">
       <div class="section-head">
@@ -85,7 +93,7 @@
           <h3>6410, rue Bernard-Racicot</h3>
           <p>Un 4 ½ lumineux à quelques pas du parc de la Cité, avec garage, foyer au gaz et stationnement tandem.</p>
           <div class="listing-facts"><span><strong>2</strong> chambres</span><span><strong>1</strong> salle de bain</span><span><strong>1 016</strong> pi²</span><span><strong>24127417</strong> no Centris</span></div>
-          <a class="text-link" href="#contact">Demander la fiche à jour <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#contact">Demander la fiche à jour</a>
         </div>
       </article>
       <div class="inventory-note"><span>01</span><p><strong>Une recherche à votre mesure.</strong> Dites-moi vos secteurs et vos critères; je vous transmets les nouvelles occasions dès leur arrivée.</p><a href="#alerte">Créer mon alerte</a></div>
@@ -182,7 +190,7 @@
     <div class="footer-col"><h4>Contact</h4><a href="tel:+15148837000">Direct : 514-883-7000</a><a href="tel:+14504432331">Bureau : 450-443-2331</a><a href="mailto:ttrepanier@sutton.com">ttrepanier@sutton.com</a></div>
     <div class="footer-col"><h4>Explorer</h4><a href="#proprietes">Mes propriétés</a><a href="#acheter">Acheter</a><a href="#vendre">Vendre</a><a href="#outils">Outils</a><a href="#evaluation">Évaluation</a><a href="#ressources">Blogue</a></div>
     <div class="footer-agency"><img src="images/brand/sutton-badge-red.png" alt="Sutton" width="200" height="200"><p>Groupe Sutton-Actuel Inc.<br>Agence immobilière<br>2975, montée Saint-Hubert<br>Saint-Hubert, Québec J3Y 4H6</p></div>
-    <div class="footer-bottom"><span>© 2026 Les Immeubles Tommy Trépanier Inc. Tous droits réservés.</span><span><a href="#">Confidentialité</a><a href="#">Conditions</a><a href="#">Accessibilité</a></span><a href="#top">Haut ↑</a></div>
+    <div class="footer-bottom"><span>© 2026 Les Immeubles Tommy Trépanier Inc. Tous droits réservés.</span><span><a href="#">Confidentialité</a><a href="#">Conditions</a><a href="#">Accessibilité</a></span><a href="#top">Retour en haut</a></div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
