@@ -2,3 +2,24 @@
 @media(max-width:980px){.property-hero{grid-template-columns:1fr}.property-hero-image{min-height:62vh}.property-hero-content{padding:70px 28px}.detail-layout{grid-template-columns:1fr}.detail-sidebar{position:static;max-width:500px}.detail-header nav a:not(.detail-contact){display:none}}
 @media(max-width:600px){.detail-header{height:70px}.detail-brand span{display:none}.detail-header nav{gap:8px}.detail-header nav a{font-size:.64rem}.detail-contact{padding:13px}.property-hero{min-height:0}.property-hero-image{min-height:430px}.property-hero-image .status{top:20px;left:20px}.property-hero-content h1{font-size:3.65rem}.property-quickfacts{grid-template-columns:1fr}.property-quickfacts div{padding:14px 0}.detail-main{padding:85px 20px}.detail-section{margin-bottom:55px;padding-bottom:55px}.detail-grid{grid-template-columns:1fr}.location-map{height:390px}.detail-footer{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:600px){
+  .property-hero-content{padding:44px 20px}
+  .property-hero-content h1{font-size:clamp(2.65rem,10.8vw,3.65rem);overflow-wrap:anywhere}
+  .property-hero-image{min-height:0;height:340px}
+  .property-quickfacts{grid-template-columns:repeat(3,minmax(0,1fr));gap:1px}
+  .property-quickfacts div{padding:16px 8px}
+  .property-quickfacts strong{font-size:1.15rem;overflow-wrap:anywhere;line-height:1.2}
+  .property-quickfacts span{font-size:.62rem;line-height:1.5}
+  .hero-actions .detail-button{flex:1;min-width:130px}
+  .detail-main{padding:64px 20px}
+  .detail-section h2{font-size:clamp(2.3rem,10vw,3rem);overflow-wrap:anywhere}
+  .detail-section>p{font-size:1rem;line-height:1.75}
+  .detail-grid>div{padding:20px}
+  .cost-list div{gap:14px;align-items:start;line-height:1.6}
+  .cost-list span{flex:1;min-width:0}
+  .cost-list strong{max-width:47%;text-align:right;overflow-wrap:anywhere}
+  .broker-visual{height:310px}
+  .broker-visual img.portrait{object-position:center top}
+  .detail-button,.detail-contact{-webkit-appearance:none;border-radius:0}
+  .detail-footer{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+}

@@ -6,6 +6,7 @@
   --section-space:clamp(82px,7vw,112px);
 }
 
+
 main>section[id]{scroll-margin-top:76px}
 .section{margin-inline:auto}
 
