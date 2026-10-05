@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="styles-fullbleed.css">
   <link rel="stylesheet" href="styles-listings.css">
   <link rel="stylesheet" href="styles-premium.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="property-experience.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -75,38 +77,57 @@
 
     <div class="marquee" aria-hidden="true"><div><span>ACHETER AVEC CONFIANCE</span><i>✦</i><span>VENDRE AVEC STRATÉGIE</span><i>✦</i><span>VIVRE LA RIVE-SUD</span><i>✦</i><span>ACHETER AVEC CONFIANCE</span><i>✦</i><span>VENDRE AVEC STRATÉGIE</span><i>✦</i></div></div>
 
-    <section class="section properties" id="proprietes" aria-labelledby="properties-title">
-      <div class="section-head">
-        <div><p class="eyebrow">En marché · 4 propriétés</p><h2 id="properties-title">Mes propriétés</h2></div>
-        <div class="section-head-aside"><p>Une sélection bien réelle, de Chambly à Saint-Joseph-de-Sorel. Consultez chaque fiche officielle pour tous les détails.</p><a class="section-link" href="https://www.centris.ca/fr/courtier-immobilier~tommy-trepanier~groupe-sutton-actuel-inc.-st-hubert/g4634" target="_blank" rel="noopener">Voir toutes les propriétés <span aria-hidden="true">↗</span></a></div>
+    <section class="listing-experience" id="proprietes" aria-labelledby="properties-title">
+      <div class="listing-shell">
+        <div class="listing-heading">
+          <div><p class="eyebrow">Une adresse. Mille possibilités.</p><h2 id="properties-title">Mes <em>propriétés.</em></h2></div>
+          <div class="listing-heading-actions"><p>Quatre inscriptions actuelles, présentées avec l’espace et la clarté qu’un projet immobilier mérite.</p><div><button class="listing-control" id="listing-prev" type="button">Précédent</button><button class="listing-control" id="listing-next" type="button">Suivant</button><a class="listing-map-link" href="#carte">Explorer la carte</a></div></div>
+        </div>
+        <div class="listing-track" id="listing-track">
+          <article class="editorial-property" data-property-id="14952731" data-type="terrain" data-city="chambly" data-price="550000" data-beds="0">
+            <a href="properties/14952731.html" aria-label="Découvrir le terrain de la terrasse Fonrouge à Chambly">
+              <div class="editorial-media"><img src="images/brand/listing-14952731.jpg" alt="Terrain boisé sur la terrasse Fonrouge à Chambly" width="900" height="675" loading="lazy"><span>À vendre</span></div>
+              <div class="editorial-body"><div class="editorial-line"><p>Terrain résidentiel</p><strong>550 000 $</strong></div><h3>Terrasse Fonrouge</h3><p class="editorial-city">Chambly</p><div class="editorial-facts"><span>17 293 pi²</span><span>Cul-de-sac</span><span>Prêt à bâtir</span></div><span class="editorial-cta">Voir la fiche complète</span></div>
+            </a>
+          </article>
+          <article class="editorial-property" data-property-id="13305206" data-type="maison" data-city="chambly" data-price="419000" data-beds="3">
+            <a href="properties/13305206.html" aria-label="Découvrir la maison du 812 rue des Cèdres à Chambly">
+              <div class="editorial-media"><img src="images/brand/listing-13305206.jpg" alt="Maison du 812 rue des Cèdres à Chambly" width="900" height="675" loading="lazy"><span>À vendre</span></div>
+              <div class="editorial-body"><div class="editorial-line"><p>Maison à étages</p><strong>419 000 $</strong></div><h3>812, rue des Cèdres</h3><p class="editorial-city">Chambly</p><div class="editorial-facts"><span>3 chambres</span><span>2 salles de bain</span><span>Terrain 5 750 pi²</span></div><span class="editorial-cta">Voir la fiche complète</span></div>
+            </a>
+          </article>
+          <article class="editorial-property" data-property-id="24127417" data-type="condo" data-city="saint-hubert" data-price="419000" data-beds="2">
+            <a href="properties/24127417.html" aria-label="Découvrir le condo du 6410 rue Bernard-Racicot à Saint-Hubert">
+              <div class="editorial-media"><img src="images/brand/listing-24127417.jpg" alt="Condo du 6410 rue Bernard-Racicot à Saint-Hubert" width="900" height="675" loading="lazy"><span>À vendre</span></div>
+              <div class="editorial-body"><div class="editorial-line"><p>Condo avec garage</p><strong>419 000 $</strong></div><h3>6410, rue Bernard-Racicot, app. 5</h3><p class="editorial-city">Longueuil · Saint-Hubert</p><div class="editorial-facts"><span>2 chambres</span><span>1 salle de bain</span><span>1 016 pi²</span></div><span class="editorial-cta">Voir la fiche complète</span></div>
+            </a>
+          </article>
+          <article class="editorial-property" data-property-id="11195733" data-type="terrain" data-city="saint-joseph-de-sorel" data-price="199000" data-beds="0">
+            <a href="properties/11195733.html" aria-label="Découvrir le terrain de la rue Pie-X à Saint-Joseph-de-Sorel">
+              <div class="editorial-media"><img src="images/brand/listing-11195733.jpg" alt="Terrain de la rue Pie-X à Saint-Joseph-de-Sorel" width="900" height="675" loading="lazy"><span>À vendre</span></div>
+              <div class="editorial-body"><div class="editorial-line"><p>Terrain polyvalent</p><strong>199 000 $</strong></div><h3>Rue Pie-X</h3><p class="editorial-city">Saint-Joseph-de-Sorel</p><div class="editorial-facts"><span>12 000 pi²</span><span>Garage isolé</span><span>Résidentiel + commercial</span></div><span class="editorial-cta">Voir la fiche complète</span></div>
+            </a>
+          </article>
+        </div>
+        <div class="listing-progress" aria-hidden="true"><span id="listing-progress-bar"></span></div>
+        <p class="listing-source">Données d’inscription vérifiées le 5 octobre 2026. La disponibilité peut changer sans préavis.</p>
       </div>
-      <div class="property-grid">
-        <article class="property-card property-card-wide">
-          <a class="property-card-link" href="https://www.centris.ca/fr/terrain~a-vendre~chambly/14952731" target="_blank" rel="noopener" aria-label="Voir le terrain à vendre sur la terrasse Fonrouge à Chambly sur Centris">
-            <div class="property-media"><img src="images/brand/listing-14952731.jpg" alt="Vue aérienne du terrain boisé sur la terrasse Fonrouge à Chambly" width="640" height="480" loading="lazy"><span class="property-status">À vendre</span><span class="property-price">550 000 $</span></div>
-            <div class="property-info"><p class="property-type">Terrain · Chambly</p><h3>Terrasse Fonrouge</h3><div class="property-meta"><span>17 293 pi²</span><span>Zonage résidentiel</span></div><div class="property-foot"><span>Centris 14952731</span><strong>Voir la propriété</strong></div></div>
-          </a>
-        </article>
-        <article class="property-card">
-          <a class="property-card-link" href="https://www.centris.ca/fr/maison~a-vendre~chambly/13305206" target="_blank" rel="noopener" aria-label="Voir la maison à vendre au 812 rue des Cèdres à Chambly sur Centris">
-            <div class="property-media"><img src="images/brand/listing-13305206.jpg" alt="Maison à étage au 812 rue des Cèdres à Chambly" width="640" height="480" loading="lazy"><span class="property-status">À vendre</span><span class="property-price">419 000 $</span></div>
-            <div class="property-info"><p class="property-type">Maison à étage · Chambly</p><h3>812, rue des Cèdres</h3><div class="property-meta"><span>3 chambres</span><span>2 salles de bain</span></div><div class="property-foot"><span>Centris 13305206</span><strong>Voir la propriété</strong></div></div>
-          </a>
-        </article>
-        <article class="property-card">
-          <a class="property-card-link" href="https://www.centris.ca/fr/condo~a-vendre~longueuil-saint-hubert/24127417" target="_blank" rel="noopener" aria-label="Voir le condo à vendre au 6410 rue Bernard-Racicot à Saint-Hubert sur Centris">
-            <div class="property-media"><img src="images/brand/listing-24127417.jpg" alt="Immeuble du condo au 6410 rue Bernard-Racicot à Saint-Hubert" width="320" height="240" loading="lazy"><span class="property-status">À vendre</span><span class="property-price">419 000 $</span></div>
-            <div class="property-info"><p class="property-type">Condo · Saint-Hubert</p><h3>6410, rue Bernard-Racicot, app. 5</h3><div class="property-meta"><span>2 chambres</span><span>1 salle de bain · 1 016 pi²</span></div><div class="property-foot"><span>Centris 24127417</span><strong>Voir la propriété</strong></div></div>
-          </a>
-        </article>
-        <article class="property-card property-card-wide">
-          <a class="property-card-link" href="https://www.centris.ca/fr/terrain~a-vendre~saint-joseph-de-sorel/11195733" target="_blank" rel="noopener" aria-label="Voir le terrain à vendre sur la rue Pie-X à Saint-Joseph-de-Sorel sur Centris">
-            <div class="property-media"><img src="images/brand/listing-11195733.jpg" alt="Vue aérienne du terrain à vendre sur la rue Pie-X à Saint-Joseph-de-Sorel" width="320" height="240" loading="lazy"><span class="property-status">À vendre</span><span class="property-price">199 000 $</span></div>
-            <div class="property-info"><p class="property-type">Terrain · Saint-Joseph-de-Sorel</p><h3>Rue Pie-X</h3><div class="property-meta"><span>12 000 pi²</span><span>Terrain résidentiel</span></div><div class="property-foot"><span>Centris 11195733</span><strong>Voir la propriété</strong></div></div>
-          </a>
-        </article>
+    </section>
+
+    <section class="property-finder" id="carte" aria-labelledby="finder-title">
+      <div class="finder-intro">
+        <div><p class="eyebrow">La Rive-Sud, à portée de main</p><h2 id="finder-title">Trouvez votre place.<br><em>Explorez la carte.</em></h2></div>
+        <p>Sélectionnez un repère pour découvrir l’inscription, son quartier et ses détails. La carte vous suit avec fluidité d’une adresse à l’autre.</p>
       </div>
-      <div class="inventory-note property-source"><span>04</span><p><strong>Inventaire Centris vérifié.</strong> Prix et disponibilité en date du 3 octobre 2026. Les fiches Centris demeurent la source officielle.</p><a href="https://www.centris.ca/fr/courtier-immobilier~tommy-trepanier~groupe-sutton-actuel-inc.-st-hubert/g4634" target="_blank" rel="noopener">Profil Centris</a></div>
+      <div class="finder-stage">
+        <div id="property-map" aria-label="Carte interactive des propriétés de Tommy Trépanier"></div>
+        <article class="map-property-card" id="map-property-card" aria-live="polite">
+          <div class="map-card-image"><img id="map-card-image" src="images/brand/listing-14952731.jpg" alt="Terrain boisé sur la terrasse Fonrouge à Chambly"><span>À vendre</span></div>
+          <div class="map-card-body"><p id="map-card-city">Chambly</p><h3 id="map-card-title">Terrasse Fonrouge</h3><strong id="map-card-price">550 000 $</strong><p id="map-card-facts">Terrain · 17 293 pi² · Prêt à bâtir</p><a id="map-card-link" href="properties/14952731.html">Découvrir cette propriété</a></div>
+          <div class="map-card-tabs" aria-label="Choisir une propriété"><button type="button" class="active" data-map-index="0">01</button><button type="button" data-map-index="1">02</button><button type="button" data-map-index="2">03</button><button type="button" data-map-index="3">04</button></div>
+        </article>
+        <div class="finder-place"><span>Rive-Sud</span><strong>Une présence locale.</strong></div>
+      </div>
     </section>
 
     <section class="section intro" aria-labelledby="intro-title">
@@ -204,6 +225,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="mobile-contact-bar"><a href="tel:+15148837000">Appeler Tommy</a><a href="#contact">Me contacter</a></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>
 </body>
 </html>
