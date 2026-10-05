@@ -2,6 +2,10 @@ const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelecto
 const menu=$('.menu-toggle'),nav=$('.main-nav');
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});
 $$('.main-nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const header=$('.site-header');
+const syncHeader=()=>header.classList.toggle('scrolled',window.scrollY>36);
+addEventListener('scroll',syncHeader,{passive:true});syncHeader();
+addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
 const toast=$('#toast');function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.classList.remove('show'),3600)}
 $('#property-search-form').addEventListener('submit',e=>{e.preventDefault();$('#search-status').textContent='Recherche préparée. Tommy confirmera les propriétés actuellement disponibles selon vos critères.';document.querySelector('#proprietes').scrollIntoView({behavior:'smooth'});});
 const evalForm=$('#evaluation-form'),step1=$('[data-step="1"]',evalForm),step2=$('[data-step="2"]',evalForm);
