@@ -1,10 +1,40 @@
-/* Final layout pass: prevent the premium constrained rules from inheriting
-   the older left-aligned full-bleed margins on wide screens. */
+/* Final layout system. This file intentionally loads last and normalizes the
+   spacing accumulated by the earlier visual layers. */
+:root{
+  --layout-max:none;
+  --layout-gutter:clamp(24px,5vw,96px);
+  --section-space:clamp(82px,7vw,112px);
+}
+
+main>section[id]{scroll-margin-top:76px}
 .section{margin-inline:auto}
-.intro{width:100%;max-width:none;margin:0;padding-inline:clamp(48px,7.5vw,150px);grid-template-columns:minmax(390px,.92fr) minmax(480px,1.08fr);gap:clamp(70px,8vw,150px)}
-.intro-portrait{width:min(100%,620px);justify-self:end}
-.intro-copy{width:min(100%,720px);justify-self:start}
-.pathways{width:min(calc(100% - 48px),1540px);max-width:1540px;margin:24px auto;padding:0;gap:14px;grid-template-columns:1.06fr .94fr;align-items:stretch}
+
+/* One horizontal grid from the hero to the footer. Earlier layers used
+   several unrelated 1240/1440/1540px caps, which made sections visibly jump. */
+.hero-copy{padding-left:var(--layout-gutter)}
+.property-search{width:calc(100% - (var(--layout-gutter) * 2))}
+.listing-shell,
+.finder-intro{
+  width:100%;max-width:none;
+  padding-left:var(--layout-gutter);
+  padding-right:var(--layout-gutter)
+}
+
+/* Keep the editorial opening generous without turning it into a second hero. */
+.intro{
+  width:100%;max-width:none;margin:0;
+  padding:var(--section-space) var(--layout-gutter);
+  grid-template-columns:minmax(360px,.9fr) minmax(460px,1.1fr);
+  gap:clamp(60px,7vw,118px)
+}
+.intro-portrait{width:min(100%,570px);height:620px;justify-self:end}
+.intro-copy{width:min(100%,690px);justify-self:start}
+.intro-copy h2{font-size:clamp(3.25rem,4.35vw,5rem);line-height:.92}
+.intro-points{margin:28px 0}
+.intro-points p{padding:16px 0}
+
+/* Two useful, visually distinct pathways—not two oversized duplicate cards. */
+.pathways{width:100%;max-width:none;margin:0;padding:24px var(--layout-gutter);gap:14px;grid-template-columns:1.06fr .94fr;align-items:stretch}
 .pathway{min-height:0;padding:clamp(40px,3.35vw,54px);border-radius:2px}
 .pathway h2{font-size:clamp(3rem,3.8vw,4.6rem);line-height:.91;max-width:760px}
 .pathway-sell h2{font-size:clamp(2.9rem,3.55vw,4.35rem)}
@@ -26,25 +56,116 @@
 .selling-points span{display:block;padding:15px 0;border-bottom:1px solid #3a3c37;font:500 .75rem/1.35 var(--sans);color:#e8e6df}
 .selling-layout .button{margin-top:0}
 
+/* Supporting sections share a tighter, intentional rhythm. */
+.evaluation,
+.alert-section,
+.resources{
+  width:100%;max-width:none;
+  padding:var(--section-space) var(--layout-gutter);
+}
+.evaluation{
+  grid-template-columns:minmax(330px,.78fr) minmax(520px,1.22fr);
+  gap:clamp(56px,6vw,100px)
+}
+.evaluation-copy h2,
+.alert-section h2,
+.resources h2,
+.tools h2,
+.callback h2{
+  font-size:clamp(3.15rem,4.15vw,4.85rem);
+  line-height:.93
+}
+.evaluation-form,
+.alert-section form,
+.callback form{padding:clamp(30px,3vw,44px)}
+.evaluation-form label,
+.alert-section label,
+.callback label{margin-bottom:16px}
+
+/* The tools remain immersive, but no longer leave a giant dark slab. */
+.tools{
+  width:100%;max-width:none;margin:0;
+  padding:var(--section-space) var(--layout-gutter);
+  grid-template-columns:minmax(320px,.72fr) minmax(520px,1.28fr);
+  gap:clamp(60px,7vw,112px)
+}
+.tool summary{padding:24px 0}
+.tool summary strong{font-size:1.35rem}
+.tool-body{padding-bottom:26px}
+
+/* Alert form: compact, readable and vertically aligned with its heading. */
+.alert-section{
+  grid-template-columns:minmax(330px,.72fr) minmax(620px,1.28fr);
+  gap:clamp(60px,7vw,110px);
+  align-items:center
+}
+.alert-section>div>p:last-child{max-width:390px}
+.alert-section form{background:#fbfaf6}
+.alert-section .check{margin-bottom:12px!important}
+
+/* Editorial resources should read as a finished grid, not another long page. */
+.resources{padding-top:var(--section-space);padding-bottom:var(--section-space)}
+.resources .section-head{margin-bottom:48px}
+.article-grid .article-feature{min-height:560px;grid-template-rows:46% 1fr}
+.article-grid article{min-height:245px}
+.article-content{padding:26px}
+.article-feature .article-content{padding:34px}
+
+/* The contact close is a contained finale with less empty air. */
+.callback{
+  width:calc(100% - (var(--layout-gutter) * 2));
+  max-width:none;margin:24px auto;
+  padding:clamp(78px,6vw,100px) clamp(34px,5vw,72px);
+  grid-template-columns:minmax(330px,.78fr) minmax(520px,1.22fr);
+  gap:clamp(56px,7vw,110px)
+}
+.callback-phone{margin-top:30px}
+.footer{padding:76px var(--layout-gutter) 28px}
+
 @media(max-width:1100px){
-  .intro{padding-inline:48px;grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr);gap:64px}
-  .pathways{width:calc(100% - 32px)}
+  :root{--layout-gutter:40px;--section-space:92px}
+  .intro{grid-template-columns:minmax(330px,.9fr) minmax(0,1.1fr);gap:58px}
+  .intro-portrait{height:580px}
   .pathway{padding:46px}
   .selling-layout{grid-template-columns:1fr;gap:24px}
+  .evaluation,.alert-section,.tools,.callback{grid-template-columns:1fr;gap:48px}
+  .evaluation-copy,.tools-head{position:static}
+  .alert-section>div>p:last-child{max-width:620px}
 }
 @media(max-width:900px){
-  .intro{grid-template-columns:1fr;padding-inline:28px}
+  :root{--layout-gutter:28px;--section-space:82px}
+  .intro{grid-template-columns:1fr}
   .intro-portrait{justify-self:center}
   .intro-copy{justify-self:center}
-  .pathways{width:calc(100% - 24px);grid-template-columns:1fr;padding:0;gap:12px}
+  .pathways{grid-template-columns:1fr;padding:16px var(--layout-gutter);gap:12px}
+  .tools{padding-inline:28px}
+  .callback{width:calc(100% - (var(--layout-gutter) * 2));margin:12px auto}
+  .article-grid .article-feature{min-height:390px}
 }
 @media(max-width:600px){
+  :root{--layout-gutter:20px;--section-space:72px}
+  main>section[id]{scroll-margin-top:68px}
   .intro{padding-inline:20px}
-  .pathways{width:100%;margin:0;gap:0}
-  .pathway{padding:50px 22px;border-radius:0}
+  .intro-portrait{height:470px}
+  .intro-copy h2,
+  .evaluation-copy h2,
+  .alert-section h2,
+  .resources h2,
+  .tools h2,
+  .callback h2{font-size:clamp(2.75rem,12vw,3.85rem)}
+  .property-search{width:100%}
+  .listing-shell,.finder-intro{padding-left:20px;padding-right:20px}
+  .pathways{width:100%;margin:0;padding:0;gap:0}
+  .pathway{padding:54px 22px;border-radius:0}
   .pathway h2{font-size:clamp(2.85rem,13vw,4rem)}
   .pathway-top{margin-bottom:28px}
   .buying-steps{grid-template-columns:1fr;margin-bottom:30px}
   .buying-steps li,.buying-steps li+li{padding:13px 0;border-left:0;border-bottom:1px solid rgba(23,25,22,.13)}
   .buying-steps li:last-child{border-bottom:0}
+  .evaluation,.alert-section,.resources{padding:72px 20px}
+  .tools{padding:72px 20px}
+  .evaluation-form,.alert-section form,.callback form{padding:26px 22px}
+  .article-grid .article-feature{min-height:0}
+  .callback{width:100%;margin:0;padding:72px 20px;border-radius:0}
+  .footer{padding-top:62px}
 }
