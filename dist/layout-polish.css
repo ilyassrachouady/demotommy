@@ -1,0 +1,24 @@
+/* Final layout pass: prevent the premium constrained rules from inheriting
+   the older left-aligned full-bleed margins on wide screens. */
+.section{margin-inline:auto}
+.intro{width:100%;max-width:none;margin:0;padding-inline:clamp(48px,7.5vw,150px);grid-template-columns:minmax(390px,.92fr) minmax(480px,1.08fr);gap:clamp(70px,8vw,150px)}
+.intro-portrait{width:min(100%,620px);justify-self:end}
+.intro-copy{width:min(100%,720px);justify-self:start}
+.pathways{width:100%;max-width:none;margin:0;padding:14px 0;gap:14px}
+.pathway{min-height:720px;padding-inline:clamp(56px,6vw,118px)}
+
+@media(max-width:1100px){
+  .intro{padding-inline:48px;grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr);gap:64px}
+  .pathway{padding-inline:56px}
+}
+@media(max-width:900px){
+  .intro{grid-template-columns:1fr;padding-inline:28px}
+  .intro-portrait{justify-self:center}
+  .intro-copy{justify-self:center}
+  .pathways{grid-template-columns:1fr;padding:12px;gap:12px}
+}
+@media(max-width:600px){
+  .intro{padding-inline:20px}
+  .pathways{padding:0;gap:0}
+  .pathway{padding-inline:22px}
+}
